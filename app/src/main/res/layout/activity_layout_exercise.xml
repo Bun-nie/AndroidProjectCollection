@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LayoutExercise">
+    <!--MAINNNNN-->
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+        <!--HEADERRRRRR-->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+            <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10dp" android:backgroundTint="@color/lightgray">-->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center">
+                <ImageButton android:id="@+id/camera" android:layout_width="60dp" android:layout_height="60dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_camera" android:visibility="visible"/>
+                <ImageView android:id="@+id/logo" android:layout_width="283dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="centerInside" android:visibility="visible" app:srcCompat="@drawable/logo"/>
+                <ImageButton android:id="@+id/message" android:layout_width="60dp" android:layout_height="60dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_message" android:visibility="visible"/>
+            </LinearLayout>
+            <!--</HorizontalScrollView>-->
+
+
+
+            <!--STORRYYYYY-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_cat1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat1" />
+
+                        <TextView
+                            android:id="@+id/stry_nicole"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/nicole" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat2" />
+                        <TextView
+                            android:id="@+id/stry_ana"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/ana" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat3" />
+                        <TextView
+                            android:id="@+id/stry_guada"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/guada" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat4"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat4" />
+                        <TextView
+                            android:id="@+id/stry_francis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/francis" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat5"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat5" />
+                        <TextView
+                            android:id="@+id/stry_paul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/paul" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat6"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat6" />
+                        <TextView
+                            android:id="@+id/stry_gelo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/gelo" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat7"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat7" />
+                        <TextView
+                            android:id="@+id/stry_lee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lee" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat8"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat8" />
+                        <TextView
+                            android:id="@+id/stry_nina"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/nina" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/img_cat9"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/img_cat9" />
+                        <TextView
+                            android:id="@+id/stry_ray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/ray" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <!--MAAAIIINNNN SCREEENNNNN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nicole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nicole"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <ImageView
+                    android:id="@+id/img_nicole"
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp"
+                    app:srcCompat="@drawable/img_cat1" />
+                <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/heart1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_heart_unclicked"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/share1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_share"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/comment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/hldr_comment"
+                        android:inputType="text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/ana" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ana" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                <ImageView android:id="@+id/img_ana" android:layout_width="match_parent" android:layout_height="185dp" app:srcCompat="@drawable/img_cat2"/>
+                <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">-->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center">
+                    <ImageButton android:id="@+id/heart2" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_heart_unclicked" android:visibility="visible"/>
+                    <ImageButton android:id="@+id/share2" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_share" android:visibility="visible"/>
+                    <EditText android:id="@+id/comment2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:ems="10" android:hint="@string/hldr_comment" android:inputType="text" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                </LinearLayout>
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/guada" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/guada" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                <ImageView android:id="@+id/img_guada" android:layout_width="match_parent" android:layout_height="185dp" app:srcCompat="@drawable/img_cat3"/>
+                <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">-->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center">
+                    <ImageButton android:id="@+id/heart3" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_heart_unclicked" android:visibility="visible"/>
+                    <ImageButton android:id="@+id/share3" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_share" android:visibility="visible"/>
+                    <EditText android:id="@+id/comment3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:ems="10" android:hint="@string/hldr_comment" android:inputType="text" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                </LinearLayout>
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/francis" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/francis" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                <ImageView android:id="@+id/img_francis" android:layout_width="match_parent" android:layout_height="185dp" app:srcCompat="@drawable/img_cat4"/>
+                <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">-->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center">
+                    <ImageButton android:id="@+id/heart4" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_heart_unclicked" android:visibility="visible"/>
+                    <ImageButton android:id="@+id/share4" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_share" android:visibility="visible"/>
+                    <EditText android:id="@+id/comment4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:ems="10" android:hint="@string/hldr_comment" android:inputType="text" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                </LinearLayout>
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/paul" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/paul" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                <ImageView android:id="@+id/img_paul" android:layout_width="match_parent" android:layout_height="185dp" app:srcCompat="@drawable/img_cat5"/>
+                <!--<HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent">-->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center">
+                    <ImageButton android:id="@+id/heart5" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_heart_unclicked" android:visibility="visible"/>
+                    <ImageButton android:id="@+id/share5" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1" android:background="#FFFFFF" android:scaleType="centerInside" android:src="@drawable/ic_share" android:visibility="visible"/>
+                    <EditText android:id="@+id/comment5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:ems="10" android:hint="@string/hldr_comment" android:inputType="text" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                </LinearLayout>
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AndroidProjectCollection</string>
+    <!--Buttons-->
+    <string name="btn_start">Instagram</string>
+    <string name="btn_end">Calculator</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_next">ButtonExercise</string>
+
+    <string name="btn_close">Close</string>
+    <string name="btn_toast">Toast</string>
+    <string name="btn_change_bg">Change BG</string>
+    <string name="btn_change_btn_bg">Change Button BG</string>
+    <string name="btn_disappear">Disappear</string>
+
+
+    <string name="btn_return">Return</string>
+
+    <!-- Holders -->
+    <string name="hldr_blank" />
+    <string name="hldr_comment">Comment</string>
+
+
+    <!-- Usernames -->
+    <string name="guada">its_guadalueee</string>
+    <string name="paul">its_paul</string>
+    <string name="francis">its_franci_zzz</string>
+    <string name="nina">its_ninzzz</string>
+    <string name="nicole">bun_nieee</string>
+    <string name="ana">ana_banana</string>
+    <string name="lee">jerem_lee</string>
+    <string name="gelo">gelotinnn</string>
+    <string name="ray">its_rayyy</string>
+</resources>
