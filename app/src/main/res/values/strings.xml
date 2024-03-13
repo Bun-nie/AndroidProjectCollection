@@ -45,11 +45,12 @@
 
     <string name="clr">Clear</string>
     <string name="dec">.</string>
-    <string name="mult">x</string>
+    <string name="mult">*</string>
     <string name="div">/</string>
     <string name="add">+</string>
     <string name="sub">-</string>
     <string name="equal">=</string>
 
     <string name="res">0</string>
+    <string name="prompt">Enter number here</string>
 </resources>
