@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_calc = (Button) findViewById(R.id.btn_end);
+        btn_calc = (Button)findViewById(R.id.btn_end);
         btn_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
