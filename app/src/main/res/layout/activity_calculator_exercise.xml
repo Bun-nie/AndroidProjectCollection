@@ -72,7 +72,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn7"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn8"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="121dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -96,7 +96,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn9"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="208dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -108,7 +108,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/div"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="296dp"
                 tools:layout_editor_absoluteY="266dp" />
         </LinearLayout>
@@ -132,7 +132,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn4"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="356dp" />
 
@@ -144,7 +144,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn5"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="121dp"
                 tools:layout_editor_absoluteY="356dp" />
 
@@ -156,7 +156,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn6"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="216dp"
                 tools:layout_editor_absoluteY="346dp" />
 
@@ -168,7 +168,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/mult"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="296dp"
                 tools:layout_editor_absoluteY="356dp" />
         </LinearLayout>
@@ -192,7 +192,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="22dp"
                 tools:layout_editor_absoluteY="436dp" />
 
@@ -204,7 +204,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="128dp"
                 tools:layout_editor_absoluteY="441dp" />
 
@@ -216,7 +216,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn3"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="216dp"
                 tools:layout_editor_absoluteY="436dp" />
 
@@ -228,7 +228,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/sub"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="296dp"
                 tools:layout_editor_absoluteY="439dp" />
         </LinearLayout>
@@ -252,7 +252,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/btn0"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="529dp" />
 
@@ -264,7 +264,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/dec"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="128dp"
                 tools:layout_editor_absoluteY="529dp" />
 
@@ -276,7 +276,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/equal"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="223dp"
                 tools:layout_editor_absoluteY="521dp" />
 
@@ -288,7 +288,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="@string/add"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="303dp"
                 tools:layout_editor_absoluteY="521dp" />
         </LinearLayout>
