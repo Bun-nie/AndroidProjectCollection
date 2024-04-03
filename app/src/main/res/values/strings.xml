@@ -3,8 +3,9 @@
     <!--Buttons-->
     <string name="btn_start">Instagram</string>
     <string name="btn_end">Calculator</string>
-    <string name="btn_exit">Exit</string>
-    <string name="btn_next">ButtonExercise</string>
+    <string name="btn_exit">Color Match</string>
+    <string name="btn_next">Button Exercise</string>
+    <string name="btn_tictactoe">MIDTERMS - TIC TAC TOE</string>
 
     <string name="btn_close">Close</string>
     <string name="btn_toast">Toast</string>
@@ -52,4 +53,10 @@
     <string name="equal">=</string>
 
     <string name="res">0</string>
+
+    <!--Match3-->
+    <string name="match_header">COLOR MATCH</string>
+    <string name="btn_restart">Restart</string>
+    <string name="score">Score:</string>
+    <string name="init_play_display">Player O\'s Turn</string>
 </resources>
