@@ -59,4 +59,29 @@
     <string name="btn_restart">Restart</string>
     <string name="score">Score:</string>
     <string name="init_play_display">Player O\'s Turn</string>
+
+    <!--Student Registration Form-->
+    <string name="stf">Student Registration Form</string>
+    <string name="stp">Student Profile</string>
+    <string name="name">Complete Name</string>
+        <string name="fname">First Name</string>
+        <string name="lname">Last Name</string>
+    <string name="gender">Gender</string>
+        <string name="male">Male</string>
+        <string name="female">Female</string>
+        <string name="others">Others</string>
+    <string name="bdate">Birth Date</string>
+    <string name="number">Phone Number</string>
+    <string name="email">Email Address</string>
+
+    <string name="age">Age</string>
+    <string name="year">Year Level</string>
+
+    <string name="course">Course</string>
+        <string name="bscs">BSCS</string>
+        <string name="bsit">BSIT</string>
+    <string name="address">Address</string>
+    <string name="hob_int">Hobbies/Interests</string>
+
+    <string name="submit">Submit</string>
 </resources>
