@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TicTacToe extends AppCompatActivity {
@@ -44,51 +45,52 @@ public class TicTacToe extends AppCompatActivity {
             isClicked.add(new AtomicBoolean(false));
         }
         for(int i=0;i<9;i++){
+
             int index=i;
             buttons[i].setOnClickListener(v -> {
+
                 if(!isClicked.get(index).get()){
-                    if(isPlayer1Turn.get()){
-                        gameState[index] = 1;
-                    }
-                    if(!isPlayer1Turn.get()){
-                        gameState[index] = 2;
-                    }
+
                     isClicked.get(index).set(true);
+
                     buttons[index].setText(isPlayer1Turn.get() ? "O" : "X");
+                    buttons[index].setTag(isPlayer1Turn.get() ? "O" : "X");
                     background.setBackgroundColor(isPlayer1Turn.get() ? RED : BLUE);
                     isPlayer1Turn.set(!isPlayer1Turn.get());
                     display.setText(isPlayer1Turn.get() ? "Player O's Turn" : "Player X's Turn");
-                    /*boolean check = checkWin();
-                    if(check){
-                        endgame("Player " + (isPlayer1Turn.get() ? "1" : "2") + "Wins!");
-                    }*/
+                    checkWin(isPlayer1Turn.get() ? "O" : "X");
                 }
+
             });
         }
-        /*boolean fin = true;
+
+        boolean fin = true;
         for(int i=0;i<9;i++){
             if(!isClicked.get(i).get()){
                 fin = false;
+                break;
             }
         }
         if(fin){
-            endgame("Stalemate!");
-        }*/
+            stalement();
+        }
         restart.setOnClickListener(v -> reset());
     }
-    public boolean checkWin(){
-        if((gameState[0] == 1 && gameState[1] == 1 && gameState[2] == 1) ||
-                (gameState[3] == 1 && gameState[4] == 1 && gameState[5] == 1) ||
-                (gameState[6] == 1 && gameState[7] == 1 && gameState[8] == 1) ||
-                (gameState[0] == 1 && gameState[3] == 1 && gameState[6] == 1) ||
-                (gameState[1] == 1 && gameState[4] == 1 && gameState[7] == 1) ||
-                (gameState[2] == 1 && gameState[5] == 1 && gameState[8] == 1) ||
-                (gameState[0] == 1 && gameState[4] == 1 && gameState[8] == 1) ||
-                (gameState[2] == 1 && gameState[4] == 1 && gameState[6] == 1)) {
-            return true;
-        } else {
-            return false;
+    public void checkWin(String player){
+        if ((buttons[0].getTag() == player && buttons[1].getTag() == player && buttons[2].getTag() == player) ||
+                (buttons[3].getTag() == player && buttons[4].getTag() == player && buttons[5].getTag() == player) ||
+                (buttons[6].getTag() == player && buttons[7].getTag() == player && buttons[8].getTag() == player) ||
+                (buttons[0].getTag() == player && buttons[3].getTag() == player && buttons[6].getTag() == player) ||
+                (buttons[1].getTag() == player && buttons[4].getTag() == player && buttons[7].getTag() == player) ||
+                (buttons[2].getTag() == player && buttons[5].getTag() == player && buttons[8].getTag() == player) ||
+                (buttons[0].getTag() == player && buttons[4].getTag() == player && buttons[8].getTag() == player) ||
+                (buttons[2].getTag() == player && buttons[4].getTag() == player && buttons[6].getTag() == player)){
+            endgame("Player " + player + " Wins!");
         }
+    }
+    
+    public void stalement(){
+        endgame("Stalement!");
     }
     public void endgame(String str){
         for(Button b : buttons){
@@ -103,6 +105,7 @@ public class TicTacToe extends AppCompatActivity {
         for(Button b : buttons){
             b.setEnabled(true);
             b.setText("");
+            b.setTag("");
         }
         isPlayer1Turn.set(true);
         background.setBackgroundColor(isPlayer1Turn.get() ? BLUE : RED);

@@ -1,67 +1,231 @@
 package com.example.androidprojectcollection;
 
-import static android.graphics.Color.BLUE;
-import static android.graphics.Color.GREEN;
-import static android.graphics.Color.RED;
-import static android.graphics.Color.YELLOW;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ColorMatch extends AppCompatActivity {
-    //Buttons in the 5x5 table
-    Button r1c1, r1c2, r1c3, r1c4, r1c5,
-            r2c1, r2c2, r2c3, r2c4, r2c5,
-            r3c1, r3c2, r3c3, r3c4, r3c5,
-            r4c1, r4c2, r4c3, r4c4, r4c5,
-            r5c1, r5c2, r5c3, r5c4, r5c5;
 
+    int[] colors = {Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW};
+    static final int red = 0, blue = 1, green = 2, yellow = 3;
+    Button[][] button;
     Button restart;
+    int[][] btnColors = new int[5][5];
+    ArrayList<Integer> rowArr = new ArrayList<>();
+    ArrayList<Integer> colArr = new ArrayList<>();
     TextView score_count;
-    Button button[][];
-    int colors[] = {RED, BLUE, YELLOW, GREEN};
-    static final int red = 0, blue = 1, yellow = 2, green = 3;
-    int count = 0;
+
+    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color_match);
-        play();
-        /*
-                Logic of game:
-                every press sa button, return index[][], then base sa index, check surrounding cells{up, down, left, right, up-right, up-left, down-right, down-left)
-
-                Include also toast messages nga muloop ug random words, murag candy crush "Yum!", "Tasty!" every makapoint
-        */
+        start();
+        restart = (Button) findViewById(R.id.restart);
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                score=0;
+                score_count.setText(String.valueOf(score));
+                start();
+            }
+        });
     }
 
-    public void init_buttons(){
+    public void start(){
         button = new Button[5][5];
-        for(int row = 1; row<=5; row++){
-            for(int col=1; col<=5; col++){
-                String resIDname = "r"+row+"c"+col;
-                button[row-1][col-1] = findViewById(this.getResources().getIdentifier(resIDname,"id",this.getPackageName()));
+        rowArr.clear();
+        colArr.clear();
+        for(int row= 0; row < 5; row++){
+            for(int col= 0; col <5; col++){
+                String resIDname = "btn"+row+col;
+                button[row][col] = findViewById(this.getResources().getIdentifier(resIDname,"id", this.getPackageName()));
             }
         }
-        restart = findViewById(R.id.btn_restart);
-    }
-    public void play(){
-        init_buttons();
-        for(Button[] b : button){
 
+        for(int row = 0; row<5; row++){
+            for(int col = 0; col<5; col++){
+                int random = new Random().nextInt(colors.length);
+                if(random == 0){
+                    btnColors[row][col] = red;
+                } else if(random == 1){
+                    btnColors[row][col] = blue;
+                } else if(random == 2){
+                    btnColors[row][col] = green;
+                } else if(random == 3){
+                    btnColors[row][col] = yellow;
+                }
+            }
+        }
+        game();
+    }
+
+    public void game(){
+        check();
+        score_count.setText("0");
+        changeColor();
+        for(int row= 0; row < 5; row++){
+            for(int col= 0; col <5; col++){
+                int finalRow = row;
+                int finalCol = col;
+                button[row][col].setOnClickListener(e -> {
+                    if(rowArr.size() < 2){
+                        rowArr.add(finalRow);
+                        colArr.add(finalCol);
+                        System.out.println("Size: "+ rowArr.size());
+                        check();
+                    }
+                    if(rowArr.size() == 2){
+                        swap();
+                        rowArr.clear();
+                        colArr.clear();
+                    }
+                });
+            }
         }
     }
-    public boolean check_match(){
-        return false;
-    }
-    public void reset(){
 
+    public void swap(){
+        int row1 = rowArr.get(0), col1 = colArr.get(0);
+        int row2 = rowArr.get(1), col2 = colArr.get(1);
+
+        if((row1+1) == row2 || (Math.abs(row1-1)) == row2 || (col1+1) == col2 || (Math.abs(col1-1) == col2)){
+            if(btnColors[row1][col1] == red){
+                if(btnColors[row2][col2] == red){
+                    button[row1][col1].setBackgroundColor(colors[red]);
+                    btnColors[row1][col1] = red;
+                    button[row2][col2].setBackgroundColor(colors[red]);
+                    btnColors[row2][col2] = red;
+                } else if(btnColors[row2][col2] == blue){
+                    button[row1][col1].setBackgroundColor(colors[blue]);
+                    btnColors[row1][col1] = blue;
+                    button[row2][col2].setBackgroundColor(colors[red]);
+                    btnColors[row2][col2] = red;
+                } else if(btnColors[row2][col2] == green){
+                    button[row1][col1].setBackgroundColor(colors[green]);
+                    btnColors[row1][col1] = green;
+                    button[row2][col2].setBackgroundColor(colors[red]);
+                    btnColors[row2][col2] = red;
+                } else if(btnColors[row2][col2] == yellow){
+                    button[row1][col1].setBackgroundColor(colors[yellow]);
+                    btnColors[row1][col1] = yellow;
+                    button[row2][col2].setBackgroundColor(colors[red]);
+                    btnColors[row2][col2] = red;
+                }
+            } else if(btnColors[row1][col1] == blue){
+                if(btnColors[row2][col2] == red){
+                    button[row1][col1].setBackgroundColor(colors[red]);
+                    btnColors[row1][col1] = red;
+                    button[row2][col2].setBackgroundColor(colors[blue]);
+                    btnColors[row2][col2] = blue;
+                } else if(btnColors[row2][col2] == blue){
+                    button[row1][col1].setBackgroundColor(colors[blue]);
+                    btnColors[row1][col1] = blue;
+                    button[row2][col2].setBackgroundColor(colors[blue]);
+                    btnColors[row2][col2] = blue;
+                } else if(btnColors[row2][col2] == green){
+                    button[row1][col1].setBackgroundColor(colors[green]);
+                    btnColors[row1][col1] = green;
+                    button[row2][col2].setBackgroundColor(colors[blue]);
+                    btnColors[row2][col2] = blue;
+                } else if(btnColors[row2][col2] == yellow){
+                    button[row1][col1].setBackgroundColor(colors[yellow]);
+                    btnColors[row1][col1] = yellow;
+                    button[row2][col2].setBackgroundColor(colors[blue]);
+                    btnColors[row2][col2] = blue;
+                }
+            } else if(btnColors[row1][col1] == green){
+                if(btnColors[row2][col2] == red){
+                    button[row1][col1].setBackgroundColor(colors[red]);
+                    btnColors[row1][col1] = red;
+                    button[row2][col2].setBackgroundColor(colors[green]);
+                    btnColors[row2][col2] = green;
+                } else if(btnColors[row2][col2] == blue){
+                    button[row1][col1].setBackgroundColor(colors[blue]);
+                    btnColors[row1][col1] = blue;
+                    button[row2][col2].setBackgroundColor(colors[green]);
+                    btnColors[row2][col2] = green;
+                } else if(btnColors[row2][col2] == green){
+                    button[row1][col1].setBackgroundColor(colors[green]);
+                    btnColors[row1][col1] = green;
+                    button[row2][col2].setBackgroundColor(colors[green]);
+                    btnColors[row2][col2] = green;
+                } else if(btnColors[row2][col2] == yellow){
+                    button[row1][col1].setBackgroundColor(colors[yellow]);
+                    btnColors[row1][col1] = yellow;
+                    button[row2][col2].setBackgroundColor(colors[green]);
+                    btnColors[row2][col2] = green;
+                }
+            } else if(btnColors[row1][col1] == yellow){
+                if(btnColors[row2][col2] == red){
+                    button[row1][col1].setBackgroundColor(colors[red]);
+                    btnColors[row1][col1] = red;
+                    button[row2][col2].setBackgroundColor(colors[yellow]);
+                    btnColors[row2][col2] = yellow;
+                } else if(btnColors[row2][col2] == blue){
+                    button[row1][col1].setBackgroundColor(colors[blue]);
+                    btnColors[row1][col1] = blue;
+                    button[row2][col2].setBackgroundColor(colors[yellow]);
+                    btnColors[row2][col2] = yellow;
+                } else if(btnColors[row2][col2] == green){
+                    button[row1][col1].setBackgroundColor(colors[green]);
+                    btnColors[row1][col1] = green;
+                    button[row2][col2].setBackgroundColor(colors[yellow]);
+                    btnColors[row2][col2] = yellow;
+                } else if(btnColors[row2][col2] == yellow){
+                    button[row1][col1].setBackgroundColor(colors[yellow]);
+                    btnColors[row1][col1] = yellow;
+                    button[row2][col2].setBackgroundColor(colors[yellow]);
+                    btnColors[row2][col2] = yellow;
+                }
+            }
+            rowArr.clear();
+            colArr.clear();
+        }
+        check();
     }
+
+    private void check() {
+        score_count = (TextView) findViewById(R.id.score_count);
+        for(int row=0;row<5;row++){
+            for(int col=0;col<3;col++){
+                if(btnColors[row][col] == btnColors[row][col+1] && btnColors[row][col] == btnColors[row][col+2]){
+                    score++;
+                    btnColors[row][col] = new Random().nextInt(colors.length);
+                    btnColors[row][col+1] = new Random().nextInt(colors.length);
+                    btnColors[row][col+2] = new Random().nextInt(colors.length);
+
+                }
+            }
+        }
+        for(int row=0;row<3;row++){
+            for(int col=0;col<5;col++){
+                if(btnColors[row][col] == btnColors[row+1][col] && btnColors[row][col] == btnColors[row+2][col]){
+                    score++;
+                    btnColors[row][col] = new Random().nextInt(colors.length);
+                    btnColors[row+1][col] = new Random().nextInt(colors.length);
+                    btnColors[row+2][col] = new Random().nextInt(colors.length);
+                }
+            }
+        }
+        changeColor();
+        score_count.setText(String.valueOf(score));
+    }
+    public void changeColor(){
+        for(int row=0;row<5;row++){
+            for(int col=0;col<5;col++){
+                int color = btnColors[row][col];
+                button[row][col].setBackgroundColor(colors[color]);
+            }
+        }
+    }
+
 }
