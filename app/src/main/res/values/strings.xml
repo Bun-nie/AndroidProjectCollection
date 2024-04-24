@@ -7,6 +7,7 @@
     <string name="btn_next">Button Exercise</string>
     <string name="btn_tictactoe">MIDTERMS - TIC TAC TOE</string>
     <string name="btn_form">Passing Intents</string>
+    <string name="btn_menu">Menus</string>
 
     <string name="btn_close">Close</string>
     <string name="btn_toast">Toast</string>
