@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_insta, btn_button, btn_calc, btn_match, btn_midterms, btn_form;
+    Button btn_insta, btn_button, btn_calc, btn_match, btn_midterms, btn_form, btn_frag, btn_menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
                         PassingIntentsExercise.class //destination activity
                 );
                 startActivity(to_forms);
+            }
+        });
+
+        btn_menu = (Button) findViewById(R.id.btn_menu);
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent to_menu = new Intent(
+                        MainActivity.this,//this activity
+                        MenuExercise.class //destination activity
+                );
+                startActivity(to_menu);
             }
         });
     }
